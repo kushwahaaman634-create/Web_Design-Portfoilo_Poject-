@@ -9,7 +9,7 @@ navLinks.addEventListener("click", (e) => {
   if (e.target.tagName === "A") navLinks.classList.remove("open");
 });
 
-// Feature 2: dark / light theme switch (remembered in this browser)
+// Feature 2: dark / light theme switch 
 const root = document.documentElement;
 const themeBtn = document.getElementById("themeBtn");
 function setTheme(mode) {
@@ -58,7 +58,6 @@ form.addEventListener("submit", (e) => {
 
   if (!ok) { status.textContent = ""; return; }
 
-  // TODO (Step 4): save { name, email, message, createdAt } to a Firestore "messages" collection here.
   status.textContent = "Looks good. (Firebase saving gets added in Step 4.)";
   form.reset();
 });
