@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aman Kushwaha | BCA Student & Cybersecurity Learner</title>
+  <meta name="description" content="Portfolio of Aman Kushwaha, BCA (IBM specialization) student learning cybersecurity on TryHackMe.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Task 2: navigation bar built with Flexbox -->
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#home">aman@portfolio</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#learning">Learning</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="theme-btn" id="themeBtn" type="button">Dark mode</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero + Task 1: student profile card -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="file-tag">Case file: student profile</p>
+      <h1>Aman Kushwaha</h1>
+      <p class="typing">I am a <span id="typed"></span><span class="cursor">_</span></p>
+      <p class="lead">BCA student learning how attackers think so I can build and defend safer systems.</p>
+      <div class="actions">
+        <a class="btn primary" href="resume.pdf" download>Download resume</a>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+    </div>
+
+    <article class="profile-card">
+      <div class="stamp">Status: learning</div>
+      <div class="avatar" aria-hidden="true">AK</div>
+      <!-- TODO: replace the avatar div with: <img class="avatar" src="photo.jpg" alt="Aman Kushwaha"> -->
+      <h2>Aman Kushwaha</h2>
+      <dl>
+        <dt>Course</dt><dd>BCA, 2nd year</dd>
+        <dt>Specialization</dt><dd>IBM</dd>
+        <dt>Focus</dt><dd>Cybersecurity</dd>
+        <dt>Platform</dt><dd>TryHackMe</dd>
+      </dl>
+    </article>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About me</h2>
+    <p>I am a second-year BCA student with an IBM specialization. I am learning cybersecurity through hands-on rooms on TryHackMe, and I am building this portfolio to learn how a web project goes from code to the cloud.</p>
+    <p>My goal is to understand networks, Linux and web security well enough to work towards a junior security role.</p>
+  </section>
+
+  <section class="section" id="education">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="entry">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p>Specialization: IBM &middot; Currently in 2nd year</p>
+        <!-- TODO: add your college / university name and years -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <h2>Technical skills</h2>
+    <ul class="chips">
+      <li>Networking basics</li>
+      <li>Linux command line</li>
+      <li>Web security basics</li>
+      <li>Cryptography basics</li>
+      <li>HTML &amp; CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <!-- TODO: keep only what you can honestly explain; add more as you learn -->
+  </section>
+
+  <!-- Task 3: course section with CSS Grid (six cards) -->
+  <section class="section" id="learning">
+    <h2>What I am learning</h2>
+    <div class="course-grid">
+      <article class="course"><h3>Networking</h3><p>How data moves: IP, ports, TCP/UDP and common protocols.</p></article>
+      <article class="course"><h3>Linux</h3><p>Files, permissions, users and working from the terminal.</p></article>
+      <article class="course"><h3>Web basics</h3><p>How browsers and servers talk, and where web bugs come from.</p></article>
+      <article class="course"><h3>Cryptography</h3><p>Hashing, encryption and why passwords are stored the way they are.</p></article>
+      <article class="course"><h3>Windows basics</h3><p>Accounts, services and the places defenders look for evidence.</p></article>
+      <article class="course"><h3>Security principles</h3><p>Confidentiality, integrity, availability and thinking like a defender.</p></article>
+    </div>
+  </section>
+
+  <!-- Task 5: responsive dashboard (Grid + Flexbox + media queries) -->
+  <section class="section" id="dashboard">
+    <h2>Learning dashboard</h2>
+    <div class="dash">
+      <div class="panel wide">
+        <h3>Certificate earned</h3>
+        <p class="big">Cyber Security 101</p>
+        <p>Learning certificate from TryHackMe.</p>
+        <a class="btn small" href="CYBER_SECURITY (101) CERTIFICATE.pdf" id="certLink">View certificate</a>
+        <!-- TODO: put your real certificate URL in href -->
+      </div>
+      <div class="panel"><h3>Year</h3><p class="big">2nd</p><p>BCA, IBM</p></div>
+      <div class="panel"><h3>Platform</h3><p class="big">THM</p><p>TryHackMe</p></div>
+      <div class="panel wide">
+        <h3>Next goals</h3>
+        <ul class="goals">
+          <li>Finish more TryHackMe learning paths</li>
+          <li>Publish a write-up of a room I solved</li>
+          <li>Deploy this portfolio with Docker on AWS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="certs">
+    <h2>Certifications &amp; achievements</h2>
+    <ul class="list">
+      <li><strong>Cyber Security 101</strong> &ndash; TryHackMe learning certificate</li>
+    </ul>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <form id="contactForm" class="form" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name">
+      <p class="err" data-for="name"></p>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email">
+      <p class="err" data-for="email"></p>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+      <p class="err" data-for="message"></p>
+
+      <button class="btn primary" type="submit">Send message</button>
+      <p class="status" id="formStatus" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Aman Kushwaha. Built with HTML, CSS and JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
